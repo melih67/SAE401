@@ -1,0 +1,5 @@
+- [ ] Faire les maquettes
+- [ ] Faire les bases de données
+- [ ] Faire l'intégration de la maquette
+- [ ] Faire la liaison entre le back et le front
+- [ ] Mettre le site en ligne

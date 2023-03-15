@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Concerts{% endblock %}
+
+{% block body %}
+    <h1>Concerts</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ concert.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ concert.nom }}</td>
+            </tr>
+            <tr>
+                <th>Img</th>
+                <td>{{ concert.img }}</td>
+            </tr>
+            <tr>
+                <th>Alt</th>
+                <td>{{ concert.alt }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ concert.description }}</td>
+            </tr>
+            <tr>
+                <th>Artiste</th>
+                <td>{{ concert.artiste }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{ concert.date ? concert.date|date('Y-m-d') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_concerts_index') }}">back to list</a>
+
+    <a href="{{ path('app_concerts_edit', {'id': concert.id}) }}">edit</a>
+
+    {{ include('concerts/_delete_form.html.twig') }}
+{% endblock %}

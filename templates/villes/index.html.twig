@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Villes index{% endblock %}
+
+{% block body %}
+    <h1>Villes index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>PositionGPS</th>
+                <th>Img</th>
+                <th>Alt</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for ville in villes %}
+            <tr>
+                <td>{{ ville.id }}</td>
+                <td>{{ ville.nom }}</td>
+                <td>{{ ville.positionGPS }}</td>
+                <td>{{ ville.img }}</td>
+                <td>{{ ville.alt }}</td>
+                <td>
+                    <a href="{{ path('app_villes_show', {'id': ville.id}) }}">show</a>
+                    <a href="{{ path('app_villes_edit', {'id': ville.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_villes_new') }}">Create new</a>
+{% endblock %}

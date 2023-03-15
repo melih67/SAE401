@@ -18,4 +18,14 @@ class StaticPages extends AbstractController
             'titre' => $titre
         ]);
     }
+
+    /**
+     * @Route("/legal_notice", name="legal_notice")
+     */
+    public function legal_notice(): Response
+    {
+ 
+        return $this->render('legal_notice.html.twig', [
+        ]);
+    }
 }

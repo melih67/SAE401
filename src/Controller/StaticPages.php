@@ -28,4 +28,14 @@ class StaticPages extends AbstractController
         return $this->render('legal_notice.html.twig', [
         ]);
     }
+    
+    /**
+     * @Route("/contact", name="contact")
+     */
+    public function contact(): Response
+    {
+ 
+        return $this->render('contact.html.twig', [
+        ]);
+    }
 }

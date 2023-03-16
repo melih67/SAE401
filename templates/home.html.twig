@@ -1,4 +1,30 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-    <h1>{{ titre }}</h1>
+    <header>
+        <nav></nav>
+        <div class="bg-[#5C9EAD]">
+            <h2 class="text-white">Trouvez un concert
+                facilement 
+                avec notre carte !</h2>
+                <img src="{{ asset('images/vinile.png') }}" alt="">
+
+        </div>
+    </header>
+    <main>
+        <div>
+            <h3>Cliquez sur la ville de votre choix</h3>
+            <div class='cadre' id="carte">Carte</div>
+        </div>
+        <div>
+            <h2>Toutes les villes</h2>
+            <div>
+            {% for ville in villes %}
+                <h4>{{ ville.nom }}</h4>
+                <img src="" alt="">
+            {% endfor %}
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="{{ asset('js/home.js') }}"></script>
 {% endblock %}

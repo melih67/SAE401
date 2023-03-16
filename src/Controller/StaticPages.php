@@ -1,6 +1,9 @@
 <?php
 namespace App\Controller;
  
+use App\Entity\Villes;
+use App\Form\VillesType;
+use App\Repository\VillesRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -10,12 +13,10 @@ class StaticPages extends AbstractController
     /**
      * @Route("/", name="home")
      */
-    public function home(): Response
+    public function home(VillesRepository $villesRepository): Response
     {
-        $titre = 'Bienvenue';
- 
-        return $this->render('home.html.twig', [
-            'titre' => $titre
+        return $this->render('villes/index.html.twig', [
+            'villes' => $villesRepository->findAll(),
         ]);
     }
 

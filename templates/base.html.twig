@@ -5,6 +5,9 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap" rel="stylesheet">
         <script src="https://cdn.tailwindcss.com"></script>
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
@@ -16,6 +19,18 @@
         {% endblock %}
     </head>
     <body>
+        <header class="flex justify-between items-center bg-[#5C9EAD] text-[#EEEEEE] px-5">
+            <div class="flex flex-row p-5 items-center gap-5">
+                <img src="image.png" alt="logo" class="w-[100px] h-[100px]">
+                <h1><a href="{{ path('home') }}" class="text-6xl font-title">ConcertFinder</a></h1>
+            </div>
+            <nav>
+                <ul class="flex justify-around flex-row gap-5">
+                    <li><a href="{{ path('contact') }}" class="font-bold">Nous Contacter</a></li>
+                    <li><a href="{{ path('app_login') }}" class="p-3 bg-[#326273] rounded-3xl font-bold">Se connecter</a></li>
+                </ul>
+            </nav>
+        </header>
         <a href="{{ path('home') }}">Accueil</a> <br>
         <a href="{{ path('legal_notice') }}">Mentions légales</a> <br>
         <a href="{{ path('app_salles_index') }}">Toutes les salles (+ page pour clara(une salle en particulier) et melih(new))</a> <br>
@@ -24,5 +39,24 @@
         <a href="{{ path('app_concerts_index') }}">Tous les concerts (+page pour melih(ajout concert))</a> <br>
         <a href="{{ path('app_login') }}">Connection</a>
         {% block body %}{% endblock %}
+        <footer class="bg-[#5C9EAD] pt-8 fixed bottom-0 w-screen text-[#EEEEEE]">
+            <div class="mx-5 py-8 flex flex-row justify-between border-b-4 border-[#EEEEEE]">
+                <div class="flex flex-row gap-3">
+                    <img src="image.png" alt="logo" class="w-[80px] h-[80px]">
+                    <a href="">ConcertFinder</a>
+                </div>
+                <h1 class="text-6xl font-slogan font-bold">spice up your life</h1>
+                <div>
+                    <ul class="flex flex-col gap-5 text-end">
+                        <li><a href="{{ path('contact') }}">Nous Contacter</a></li>
+                        <li><a href="{{ path('legal_notice') }}">Mentions légales</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mx-5 py-5 flex flex-row justify-between">
+                <a href="{{ path('app_login') }}">Se connecter</a>
+                <p>&copy; 2023 ConcertFinder. All rights reserved</p>
+            </div>
+        </footer>
     </body>
 </html>

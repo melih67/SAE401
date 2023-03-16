@@ -1,47 +1,50 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-    <h2>Politique de confidentialité</h2>
-    <section>
-        <div>
-            <h3>Introduction</h3>
-            <p>Bienvenue sur notre site web dédié à la recherche de concerts près de chez vous. Nous prenons très au sérieux la protection de vos données à caractère personnel et nous nous engageons à respecter les lois et réglementations en vigueur en matière de protection des données, y compris le Règlement général sur la protection des données (RGPD).</p>
+    <h3 class="text-center text-2xl font-bold">Politique de confidentialité</h3>
+    <section class="flex justify-center flex-col items-center">
+        <div class="p-6 bg-[#D9D9D9] w-[80%] rounded-[3rem] my-5">
+            <h5 class="text-center text-lg font-bold cursor-pointer" id="intro">Introduction</h5>
+            <p class="m-5 text-center hidden" id="content_intro">Bienvenue sur notre site web dédié à la recherche de concerts près de chez vous. Nous prenons très au sérieux la protection de vos données à caractère personnel et nous nous engageons à respecter les lois et réglementations en vigueur en matière de protection des données, y compris le Règlement général sur la protection des données (RGPD).</p>
         </div>
-        <article>
-            <div>
-                <h3>Collecte et utilisation des données à caractère personnel</h3>
-                <p>Nous collectons les données à caractère personnel suivantes :</p>
-                <p>Votre adresse IP et des informations sur votre navigateur web. Les informations de localisation que vous nous fournissez lorsque vous utilisez notre outil de recherche de concerts</p>
-                <p>Nous utilisons ces données pour vous fournir les informations sur les concerts disponibles près de chez vous ou dans une ville que vous avez sélectionnée.</p>
-            </div>
-            <div>
-                <div>
-                    <h3>Base juridique du traitement des données à caractère personnel</h3>
-                    <p>Nous collectons et traitons vos données à caractère personnel sur la base de votre consentement. Vous pouvez retirer votre consentement à tout moment en nous contactant à l'adresse indiquée ci-dessous.</p>
+        <article class="flex justify-between flex-row items-center w-[80%]">
+            <div class="p-6 bg-[#D9D9D9] rounded-[3rem] my-5 w-[45%]">
+                <h5 class="text-center text-lg font-bold cursor-pointer" id="collecte">Collecte et utilisation des données à caractère personnel</h5>
+                <div id="content_collecte" class="hidden">
+                    <p class="text-center mt-8">Nous collectons les données à caractère personnel suivantes :</p>
+                    <p class="text-center mt-8">Votre adresse IP et des informations sur votre navigateur web. Les informations de localisation que vous nous fournissez lorsque vous utilisez notre outil de recherche de concerts</p>
+                    <p class="text-center mt-8">Nous utilisons ces données pour vous fournir les informations sur les concerts disponibles près de chez vous ou dans une ville que vous avez sélectionnée.</p>
                 </div>
-                <div>
-                    <h3>Cookies</h3>
-                    <p>Nous utilisons des cookies pour faciliter votre utilisation de notre site web. Vous pouvez désactiver les cookies dans les paramètres de votre navigateur si vous le souhaitez.</p>
+            </div>
+            <div class="my-5 flex justify-around flex-col items-center w-[45%]">
+                <div class="p-6 bg-[#D9D9D9] rounded-[3rem] my-5">
+                    <h5 class="text-center text-lg font-bold cursor-pointer" id="personnal_caracteres">Base juridique du traitement des données à caractère personnel</h5>
+                    <p class="text-center hidden" id="content_personnal_caracteres">Nous collectons et traitons vos données à caractère personnel sur la base de votre consentement. Vous pouvez retirer votre consentement à tout moment en nous contactant à l'adresse indiquée ci-dessous.</p>
+                </div>
+                <div class="p-6 bg-[#D9D9D9] rounded-[3rem] my-5">
+                    <h5 class="text-center text-lg font-bold cursor-pointer">Cookies</h5>
+                    <p class="text-center">Nous utilisons des cookies pour faciliter votre utilisation de notre site web. Vous pouvez désactiver les cookies dans les paramètres de votre navigateur si vous le souhaitez.</p>
                 </div>
             </div>
         </article>
-        <div>
-            <h3>Sécurité des données à caractère personnel</h3>
-            <p>Nous prenons des mesures raisonnables pour protéger vos données à caractère personnel contre la perte, l'utilisation abusive, l'accès non autorisé, la divulgation, l'altération ou la destruction. Toutefois, aucune méthode de transmission sur Internet ou de stockage électronique n'est sécurisée à 100 %, et nous ne pouvons garantir la sécurité absolue de vos données.</p>
+        <div class="p-6 bg-[#D9D9D9] rounded-[3rem] my-5">
+            <h5 class="text-center text-lg font-bold cursor-pointer">Sécurité des données à caractère personnel</h5>
+            <p class="text-center">Nous prenons des mesures raisonnables pour protéger vos données à caractère personnel contre la perte, l'utilisation abusive, l'accès non autorisé, la divulgation, l'altération ou la destruction. Toutefois, aucune méthode de transmission sur Internet ou de stockage électronique n'est sécurisée à 100 %, et nous ne pouvons garantir la sécurité absolue de vos données.</p>
         </div>
-        <article>
-            <div>
-                <h3>Droits des personnes concernées</h3>
-                <p>Vous avez le droit de demander l'accès, la rectification, l'effacement, la limitation du traitement ou la portabilité de vos données à caractère personnel. Vous avez également le droit de déposer une plainte auprès de l'autorité de contrôle compétente en matière de protection des données.</p>
+        <article class="flex justify-around flex-row items-center">
+            <div class="p-6 bg-[#D9D9D9] rounded-[3rem] my-5">
+                <h5 class="text-center text-lg font-bold cursor-pointer">Droits des personnes concernées</h5>
+                <p class="text-center">Vous avez le droit de demander l'accès, la rectification, l'effacement, la limitation du traitement ou la portabilité de vos données à caractère personnel. Vous avez également le droit de déposer une plainte auprès de l'autorité de contrôle compétente en matière de protection des données.</p>
             </div>
-            <div>
-                <h3>Modifications de la politique de confidentialité</h3>
-                <p>Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment en publiant une version mise à jour sur notre site web. Nous vous recommandons de consulter régulièrement cette page pour vous assurer que vous êtes informé des modifications éventuelles.</p>
+            <div class="p-6 bg-[#D9D9D9] rounded-[3rem] my-5">
+                <h5 class="text-center text-lg font-bold cursor-pointer">Modifications de la politique de confidentialité</h5>
+                <p class="text-center">Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment en publiant une version mise à jour sur notre site web. Nous vous recommandons de consulter régulièrement cette page pour vous assurer que vous êtes informé des modifications éventuelles.</p>
             </div>
         </article>
-        <div>
-            <h3>Contact</h3>
-            <p>Si vous avez des questions concernant cette politique de confidentialité ou la manière dont nous traitons vos données à caractère personnel, veuillez nous contacter à l'adresse e-mail suivante : acikozmelih@gmail.com</p>
+        <div class="p-6 bg-[#D9D9D9] rounded-[3rem] my-5">
+            <h5 class="text-center text-lg font-bold cursor-pointer">Contact</h5>
+            <p class="text-center">Si vous avez des questions concernant cette politique de confidentialité ou la manière dont nous traitons vos données à caractère personnel, veuillez nous contacter à l'adresse e-mail suivante : acikozmelih@gmail.com</p>
         </div>
     </section>
+    <script src="{{ asset('js/legal_notice.js') }}"></script>
 {% endblock %}

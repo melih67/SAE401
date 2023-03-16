@@ -16,12 +16,12 @@
         {% endblock %}
     </head>
     <body>
-        <a href="{{ path('home') }}">Accueil</a>
-        <a href="{{ path('legal_notice') }}">Mentions légales</a>
-        <a href="{{ path('app_salles_index') }}">Toutes les salles (+ page pour clara(une salle en particulier) et melih(new))</a>
-        <a href="{{ path('contact') }}">Page Contact</a>
-        <a href="{{ path('app_villes_index') }}">Toutes les villes (+ page pour nico )</a>
-        <a href="{{ path('app_concerts_index') }}">Tous les concerts (+page pour melih(ajout concert))</a>
+        <a href="{{ path('home') }}">Accueil</a> <br>
+        <a href="{{ path('legal_notice') }}">Mentions légales</a> <br>
+        <a href="{{ path('app_salles_index') }}">Toutes les salles (+ page pour clara(une salle en particulier) et melih(new))</a> <br>
+        <a href="{{ path('contact') }}">Page Contact</a> <br>
+        <a href="{{ path('app_villes_index') }}">Toutes les villes (+ page pour nico )</a> <br>
+        <a href="{{ path('app_concerts_index') }}">Tous les concerts (+page pour melih(ajout concert))</a> <br>
         {% block body %}{% endblock %}
     </body>
 </html>

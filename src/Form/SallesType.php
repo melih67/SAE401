@@ -7,6 +7,9 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use App\Entity\Villes;
+
 class SallesType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
@@ -18,7 +21,10 @@ class SallesType extends AbstractType
             ->add('img')
             ->add('alt')
             ->add('parcours')
-            ->add('ville')
+            ->add('ville', EntityType::class, [ 
+                'class' => Villes::class,
+                'choice_label' => 'nom'
+            ])
         ;
     }
 

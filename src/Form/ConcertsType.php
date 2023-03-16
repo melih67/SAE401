@@ -7,6 +7,9 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use App\Entity\Salles;
+
 class ConcertsType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
@@ -18,7 +21,10 @@ class ConcertsType extends AbstractType
             ->add('description')
             ->add('artiste')
             ->add('date')
-            ->add('salle')
+            ->add('salle', EntityType::class, [ 
+                'class' => Salles::class,
+                'choice_label' => 'nom'
+            ])
         ;
     }
 

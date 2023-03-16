@@ -15,7 +15,7 @@ class StaticPages extends AbstractController
      */
     public function home(VillesRepository $villesRepository): Response
     {
-        return $this->render('villes/index.html.twig', [
+        return $this->render('home.html.twig', [
             'villes' => $villesRepository->findAll(),
         ]);
     }
